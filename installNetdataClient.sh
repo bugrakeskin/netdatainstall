@@ -86,7 +86,7 @@ sudo bash -c 'cat > /etc/netdata/stream.conf' << EOF
     #CAfile =
 
     # The API_KEY to use (as the sender)
-    api key = 22136a64-6c59-4cf8-a8fd-35aa819e4993
+    api key = 0c4716e1-414d-4d9b-b4a7-f6fbf275777e
 
     # Stream Compression
     # The default is enabled
@@ -140,7 +140,7 @@ sudo bash -c 'cat > /etc/netdata/stream.conf' << EOF
 # If the key is not listed here, it will not be able to push metrics.
 
 # [API_KEY] is [YOUR-API-KEY], i.e [11111111-2222-3333-4444-555555555555]
-[0c4716e1-414d-4d9b-b4a7-f6fbf275777e]
+[API_KEY]
     # Default settings for this API key
 
     # This GUID is to be used as an API key from remote agents connecting
@@ -150,7 +150,7 @@ sudo bash -c 'cat > /etc/netdata/stream.conf' << EOF
 
     # You can disable the API key, by setting this to: no
     # The default (for unknown API keys) is: no
-    enabled = yes
+    enabled = no
 
     # A list of simple patterns matching the IPs of the servers that
     # will be pushing metrics using this API key.
