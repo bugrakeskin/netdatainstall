@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh  --stable-channel --disable-telemetry --disable-cloud
+wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh  --stable-channel --disable-telemetry --disable-cloud --non-interactive
 
 sudo bash -c 'cat > /etc/netdata/netdata.conf' << EOF
 # netdata configuration
