@@ -62,7 +62,7 @@ sudo bash -c 'cat > /etc/netdata/stream.conf' << EOF
     #             the Netdata will encrypt the connection with the parent.
     #
     # This communication is not HTTP (it cannot be proxied by web proxies).
-    destination = 192.168.50.37
+    destination = 192.168.60.50
 
     # Skip Certificate verification?
     # The netdata child is configurated to avoid invalid SSL/TLS certificate,
