@@ -66,14 +66,14 @@ sudo bash -c 'cat > /etc/netdata/stream.conf' << EOF
     #             the Netdata will encrypt the connection with the parent.
     #
     # This communication is not HTTP (it cannot be proxied by web proxies).
-    destination = 192.168.60.50
+    destination = udp:192.168.60.50
 
     # Skip Certificate verification?
     # The netdata child is configurated to avoid invalid SSL/TLS certificate,
     # so certificates that are self-signed or expired will stop the streaming.
     # Case the server certificate is not valid, you can enable the use of
     # 'bad' certificates setting the next option as 'yes'.
-    #ssl skip certificate verification = yes
+    ssl skip certificate verification = yes
 
     # Certificate Authority Path
     # OpenSSL has a default directory where the known certificates are stored.
@@ -95,7 +95,7 @@ sudo bash -c 'cat > /etc/netdata/stream.conf' << EOF
     # Stream Compression
     # The default is enabled
     # You can control stream compression in this agent with options: yes | no
-    #enable compression = yes
+    enable compression = no
 
     # The timeout to connect and send metrics
     timeout seconds = 60
@@ -176,7 +176,7 @@ sudo bash -c 'cat > /etc/netdata/stream.conf' << EOF
     #    ram      keep it in RAM, don't touch the disk
     #    none     no database at all (use this on headless proxies)
     #    dbengine like a traditional database
-    default memory mode = dbengine
+    default memory mode = ram
 
     # Shall we enable health monitoring for the hosts using this API key?
     # 3 possible values:
@@ -201,7 +201,7 @@ sudo bash -c 'cat > /etc/netdata/stream.conf' << EOF
     # Stream Compression
     # By default it is enabled.
     # You can control stream compression in this parent agent stream with options: yes | no
-    #enable compression = yes
+    enable compression = no
 
     # Replication
     # Enable replication for all hosts using this api key. Default: enabled
