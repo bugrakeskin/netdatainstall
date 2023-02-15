@@ -26,6 +26,10 @@ sudo bash -c 'cat > /etc/netdata/netdata.conf' << EOF
   mode = none
 [ml]
   enabled = no
+[logs]
+    debug log = none
+    error log = none
+    access log = none
 EOF
 
 
